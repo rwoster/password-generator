@@ -43,12 +43,16 @@ main {
     color: #10b981;
 }
 .generated-password {
+    font-family: Share Tech Mono;
     color: #10b981;
     background-color: #273549;
 }
 .top-container button {
     color: #fff;
     background-color: #10b981;
+}
+.slider p {
+    font-weight: 800;
 }
 
 /*  ========================
@@ -67,12 +71,14 @@ main {
     margin: 3.1875rem 25px 0;
     border-bottom: 1px solid #2f3e53;
 }
+
 .top-container button {
     display: flex;
     align-items: center;
     padding: 0.5625rem 1.0625rem;
+    border: none;
     border-radius: 6px;
-    margin: 3.1875rem 0;
+    margin-bottom: 3.1875rem;
 }
 .bottom-container {
     margin: 3.1875rem 25px 0;
@@ -89,4 +95,54 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+/*  ========================
+    SLIDER
+    ===================== */
+
+.slider {
+    margin: 3.1875rem 0 1em;
+    display: flex;
+    align-items: center;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    margin: 0 1.25em;
+    width: 30%;
+    background-color: #1f2937;
+}
+input[type="range"]:focus {
+    outline: none;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+    height: 5px;
+    cursor: pointer;
+    background: #10b981;
+}
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 4px solid #10b981;
+    height: 18px;
+    width: 18px;
+    border-radius: 25px;
+    background: #fff;
+    cursor: pointer;
+    margin-top: -7px;
+}
+
+@media (max-width: 550px) {
+    main {
+        max-width: 300px;
+    }
+    .bottom-container {
+        flex-direction: column;
+    }
+    .generated-password {
+        width: 250px;
+    }
+    .slider label {
+        font-size: 0.9rem;
+    }
 }

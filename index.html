@@ -16,6 +16,10 @@
             href="https://fonts.googleapis.com/css2?family=Karla:wght@800&display=swap"
             rel="stylesheet"
         />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap"
+            rel="stylesheet"
+        />
         <title>password generator</title>
     </head>
     <body>
@@ -26,7 +30,21 @@
                     <span class="accent-color">random password</span>
                 </h1>
                 <p>Never use an insecure password again.</p>
-                <button>
+                <div class="slider">
+                    <label for="password-length">
+                        Set length (9-15)
+                    </label>
+                    <input
+                        type="range"
+                        name=""
+                        list="tickmarks"
+                        id="password-length"
+                        min="9"
+                        max="15"
+                    />
+                    <p id="password-value"></p>
+                </div>
+                <button id="generatePasswordBtn">
                     <img src="./icons/bolt.png" /> Generate password
                 </button>
             </div>
