@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background-color: #ccc;
+    font-family: Inter;
+}
+p img {
+    width: 20px;
+    height: 5px;
+}
+button img {
+    width: 20px;
+    height: 25px;
+    padding-right: 5px;
+}
+
+hr {
+    width: 90%;
+    margin: 2.08rem 5%;
+    border: 1px solid #2f3e53;
+}
+
+/*  ========================
+    TYPEOPGRAPHY
+    ===================== */
+h1 {
+    font-family: Karla;
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+p {
+    font-size: 1.25rem;
+    color: #d5d4d8;
+}
+main {
+    color: #fff;
+    background-color: #1f2937;
+}
+.accent-color {
+    color: #10b981;
+}
+.generated-password {
+    color: #10b981;
+    background-color: #273549;
+}
+.top-container button {
+    color: #fff;
+    background-color: #10b981;
+}
+
+/*  ========================
+    LAYOUT
+    ===================== */
+
+h1 {
+    margin-bottom: 0.625rem;
+    padding-top: 6.25rem;
+}
+main {
+    margin: 0 auto;
+    max-width: 550px;
+}
+.top-container {
+    margin: 3.1875rem 25px 0;
+    border-bottom: 1px solid #2f3e53;
+}
+.top-container button {
+    display: flex;
+    align-items: center;
+    padding: 0.5625rem 1.0625rem;
+    border-radius: 6px;
+    margin: 3.1875rem 0;
+}
+.bottom-container {
+    margin: 3.1875rem 25px 0;
+    padding-bottom: 5.25rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+}
+.generated-password {
+    margin-bottom: 1rem;
+    width: 240px;
+    height: 40px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
