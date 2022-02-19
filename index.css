@@ -23,6 +23,19 @@ hr {
     border: 1px solid #2f3e53;
 }
 
+#light-mode {
+    width: 24px;
+    height: 24px;
+    background-image: url(./icons/sun-8786.png);
+    background-repeat: no-repeat;
+}
+#dark-mode {
+    width: 24px;
+    height: 24px;
+    background-image: url(./icons/moon-6694.png);
+    background-repeat: no-repeat;
+}
+
 /*  ========================
     TYPEOPGRAPHY
     ===================== */
@@ -33,9 +46,11 @@ h1 {
 }
 p {
     font-size: 1.25rem;
+}
+.main-dark p {
     color: #d5d4d8;
 }
-main {
+.main-dark {
     color: #fff;
     background-color: #1f2937;
 }
@@ -45,11 +60,17 @@ main {
 .generated-password {
     font-family: Share Tech Mono;
     color: #10b981;
-    background-color: #273549;
+    background-color: #2f3e53;
+    background-image: url(./icons/elipsis-no-color.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
 }
 .top-container button {
     color: #fff;
     background-color: #10b981;
+}
+main .bottom-container p {
+    color: #10b981;
 }
 .slider p {
     font-weight: 800;
@@ -61,7 +82,7 @@ main {
 
 h1 {
     margin-bottom: 0.625rem;
-    padding-top: 6.25rem;
+    padding-top: 2.25rem;
 }
 main {
     margin: 0 auto;
@@ -132,6 +153,76 @@ input[type="range"]::-webkit-slider-thumb {
     margin-top: -7px;
 }
 
+/* DARK/LIGHT MODES */
+/* The switch - the box around the slider */
+.slider-el {
+    padding-top: 1.5em;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.switch {
+    margin: 0 0.5em;
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 30px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* DARK/LIGHT SLIDER */
+.modeSlider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.modeSlider:before {
+    position: absolute;
+    content: "";
+    height: 22px;
+    width: 22px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+input:checked + .modeSlider {
+    background-color: #10b981;
+}
+
+input:checked + .modeSlider:before {
+    -webkit-transform: translateX(22px);
+    -ms-transform: translateX(22px);
+    transform: translateX(22px);
+}
+
+/* Rounded sliders */
+.modeSlider.round {
+    border-radius: 30px;
+}
+
+.modeSlider.round:before {
+    border-radius: 50%;
+}
+
+/*  ========================
+    MEDIA QUERIES
+    ===================== */
+
 @media (max-width: 550px) {
     main {
         max-width: 300px;
@@ -145,4 +236,18 @@ input[type="range"]::-webkit-slider-thumb {
     .slider label {
         font-size: 0.9rem;
     }
+}
+
+/*  ========================
+    LIGHT MODE
+    ===================== */
+.main-light {
+    color: #2b283a;
+    background-color: #ecfdf5;
+}
+.main-light p {
+    color: #6b7280;
+}
+.main-light .generated-password {
+    background-blend-mode: screen;
 }

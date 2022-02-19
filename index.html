@@ -23,8 +23,17 @@
         <title>password generator</title>
     </head>
     <body>
-        <main>
-            <div class="top-container">
+        <main id="main" class="main-light">
+            <div class="top-container top-con-dark">
+                <div class="slider-el">
+                    <span id="light-mode"></span>
+                    <label class="switch">
+                        <input type="checkbox" id="mode" />
+                        <span class="modeSlider round"></span>
+                    </label>
+                    <span id="dark-mode"></span>
+                </div>
+
                 <h1>
                     Generate a<br />
                     <span class="accent-color">random password</span>
@@ -42,29 +51,21 @@
                         min="9"
                         max="15"
                     />
-                    <p id="password-value"></p>
+                    <p id="password-value">0</p>
                 </div>
                 <button id="generatePasswordBtn">
-                    <img src="./icons/bolt.png" /> Generate password
+                    <img src="./icons/bolt.png" /> Generate passwords
                 </button>
             </div>
 
             <div class="bottom-container">
                 <div>
-                    <p class="generated-password" id="password1">
-                        <img src="./icons/elipsis-no-color.png" />
-                    </p>
-                    <p class="generated-password" id="password2">
-                        <img src="./icons/elipsis-no-color.png" />
-                    </p>
+                    <p class="generated-password"></p>
+                    <p class="generated-password"></p>
                 </div>
                 <div>
-                    <p class="generated-password" id="password3">
-                        <img src="./icons/elipsis-no-color.png" />
-                    </p>
-                    <p class="generated-password" id="password4">
-                        <img src="./icons/elipsis-no-color.png" />
-                    </p>
+                    <p class="generated-password"></p>
+                    <p class="generated-password"></p>
                 </div>
             </div>
         </main>

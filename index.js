@@ -1,9 +1,3 @@
-let password1 = document.getElementById("password1");
-let password2 = document.getElementById("password2");
-let password3 = document.getElementById("password3");
-let password4 = document.getElementById("password4");
-const genPassBtn = document.getElementById("generatePasswordBtn");
-
 const charArray = [
     "a",
     "b",
@@ -76,6 +70,10 @@ const charArray = [
     "?",
 ];
 
+let generatedPassword = document.getElementsByClassName(
+    "generated-password"
+);
+const genPassBtn = document.getElementById("generatePasswordBtn");
 let passwordLength = document.getElementById("password-length");
 let passwordValue = document.getElementById("password-value");
 let length = 0;
@@ -87,7 +85,6 @@ passwordLength.addEventListener("mousemove", () => {
 
 function getPassword(len) {
     let password = "";
-
     for (let i = 0; i < len; i++) {
         let randomNumber = Math.floor(
             Math.random() * charArray.length
@@ -98,10 +95,24 @@ function getPassword(len) {
 }
 
 genPassBtn.addEventListener("click", () => {
-    password1.textContent = getPassword(length);
-    password2.textContent = getPassword(length);
-    password3.textContent = getPassword(length);
-    password4.textContent = getPassword(length);
+    if (length != 0) {
+        for (let i = 0; i < generatedPassword.length; i++) {
+            generatedPassword[i].style.backgroundImage = "none";
+            generatedPassword[i].textContent = getPassword(length);
+        }
+    }
 });
 
-// TEST
+// LIGHT/DARK MODES
+let mainEl = document.getElementById("main");
+let mode = document.getElementById("mode");
+
+mode.addEventListener("click", () => {
+    if (mode.checked) {
+        mainEl.classList.remove("main-light");
+        mainEl.classList.add("main-dark");
+    } else {
+        mainEl.classList.remove("main-dark");
+        mainEl.classList.add("main-light");
+    }
+});
